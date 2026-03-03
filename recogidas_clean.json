@@ -1,0 +1,1478 @@
+[
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "SAN CRISTOBAL",
+    "diasRecogida": [
+      "CUARTO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28021"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "BUTARQUE",
+    "diasRecogida": [
+      "CUARTO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28021"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "LOS ANGELES",
+    "diasRecogida": [
+      "CUARTO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28041"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "LOS ROSALES",
+    "diasRecogida": [
+      "CUARTO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28021"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VILLAVERDE ALTO, CASCO HISTORICO DE VILLAVERDE",
+    "diasRecogida": [
+      "CUARTO DOMINGO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28021"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ORCASITAS",
+    "diasRecogida": [
+      "TERCER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28041"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "SAN FERMIN",
+    "diasRecogida": [
+      "TERCER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28041"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ORCASUR",
+    "diasRecogida": [
+      "TERCER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28041"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ZOFIO",
+    "diasRecogida": [
+      "SEGUNDO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28026"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PRADOLONGO",
+    "diasRecogida": [
+      "TERCER DOMINGO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28026"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ALMENDRALES",
+    "diasRecogida": [
+      "TERCER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28026"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "MOSCARDO",
+    "diasRecogida": [
+      "SEGUNDO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28026"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "COMILLAS",
+    "diasRecogida": [
+      "SEGUNDO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28019"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "OPANEL",
+    "diasRecogida": [
+      "SEGUNDO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28019"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "SAN ISIDRO",
+    "diasRecogida": [
+      "SEGUNDO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28019"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VISTA ALEGRE",
+    "diasRecogida": [
+      "SEGUNDO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28025"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PUERTA BONITA",
+    "diasRecogida": [
+      "SEGUNDO VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28025"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "BUENAVISTA",
+    "diasRecogida": [
+      "SEGUNDO SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28054"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ABRANTES",
+    "diasRecogida": [
+      "SEGUNDO DOMINGO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28025"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ALUCHE (NORTE)",
+    "diasRecogida": [
+      "PRIMER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28047"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ALUCHE (SUR)",
+    "diasRecogida": [
+      "PRIMER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28047"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "LUCERO (NORTE)",
+    "diasRecogida": [
+      "PRIMER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28047"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "LUCERO (SUR)",
+    "diasRecogida": [
+      "PRIMER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28047"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PUERTA DEL ANGEL (NORTE)",
+    "diasRecogida": [
+      "PRIMER VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28011"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PUERTA DEL ANGEL (SUR)",
+    "diasRecogida": [
+      "PRIMER SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28011"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "LOS CARMENES",
+    "diasRecogida": [
+      "PRIMER DOMINGO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28047"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CAMPAMENTO",
+    "diasRecogida": [
+      "SEGUNDO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28024"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CUATRO VIENTOS",
+    "diasRecogida": [
+      "SEGUNDO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28024"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ARGUELLES",
+    "diasRecogida": [
+      "PRIMER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28008"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CIUDAD UNIVERSITARIA",
+    "diasRecogida": [
+      "PRIMER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28040"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALDEZARZA",
+    "diasRecogida": [
+      "PRIMER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28035"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALDEZARZA (ZONA 2)",
+    "diasRecogida": [
+      "PRIMER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28035"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALDEZARZA (ZONA 3)",
+    "diasRecogida": [
+      "PRIMER VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28035"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALDEZARZA (ZONA 4)",
+    "diasRecogida": [
+      "PRIMER SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28035"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CASA DE CAMPO",
+    "diasRecogida": [
+      "PRIMER DOMINGO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28011"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ARAVACA",
+    "diasRecogida": [
+      "SEGUNDO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28023"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "EL PLANTIO",
+    "diasRecogida": [
+      "SEGUNDO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28023"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALDEMARIN",
+    "diasRecogida": [
+      "SEGUNDO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28023"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "EL PARDO",
+    "diasRecogida": [
+      "SEGUNDO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28048"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "FUENTELARREINA",
+    "diasRecogida": [
+      "SEGUNDO VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28035"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PENA GRANDE",
+    "diasRecogida": [
+      "SEGUNDO SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28035"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PILAR (NORTE)",
+    "diasRecogida": [
+      "SEGUNDO DOMINGO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28029"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PILAR (SUR)",
+    "diasRecogida": [
+      "TERCER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28029"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "LA PAZ",
+    "diasRecogida": [
+      "TERCER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28046"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALVERDE (ESTE)",
+    "diasRecogida": [
+      "TERCER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28034"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALVERDE (OESTE)",
+    "diasRecogida": [
+      "TERCER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28049"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "MIRASIERRA",
+    "diasRecogida": [
+      "TERCER VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28034"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "EL GOLOSO",
+    "diasRecogida": [
+      "TERCER SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28049"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "EL VISO",
+    "diasRecogida": [
+      "CUARTO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28006"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PROSPERIDAD",
+    "diasRecogida": [
+      "CUARTO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28002"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CIUDAD JARDIN",
+    "diasRecogida": [
+      "CUARTO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28002"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "HISPANOAMERICA",
+    "diasRecogida": [
+      "CUARTO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28016"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "NUEVA ESPANA",
+    "diasRecogida": [
+      "CUARTO VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28036"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CASTILLA",
+    "diasRecogida": [
+      "CUARTO SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28036"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "BELLAS VISTAS",
+    "diasRecogida": [
+      "PRIMER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28039"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CUATRO CAMINOS",
+    "diasRecogida": [
+      "PRIMER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28020"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CASTILLEJOS",
+    "diasRecogida": [
+      "PRIMER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28020"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ALMENARA",
+    "diasRecogida": [
+      "PRIMER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28029"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALDEACEDERAS",
+    "diasRecogida": [
+      "PRIMER VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28029"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "BERRUGUETE",
+    "diasRecogida": [
+      "PRIMER SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28039"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "GAZTAMBIDE",
+    "diasRecogida": [
+      "SEGUNDO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28015"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ARAPILES",
+    "diasRecogida": [
+      "SEGUNDO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28015"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "TRAFALGAR",
+    "diasRecogida": [
+      "SEGUNDO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28010"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ALMAGRO",
+    "diasRecogida": [
+      "SEGUNDO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28010"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "RIOS ROSAS",
+    "diasRecogida": [
+      "SEGUNDO VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28003"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALLEHERMOSO",
+    "diasRecogida": [
+      "SEGUNDO SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28003"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PACIFICO",
+    "diasRecogida": [
+      "CUARTO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28007"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ADELFAS",
+    "diasRecogida": [
+      "CUARTO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28007"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ESTRELLA",
+    "diasRecogida": [
+      "CUARTO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28007"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "IBIZA",
+    "diasRecogida": [
+      "CUARTO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28009"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "JERONIMOS",
+    "diasRecogida": [
+      "CUARTO VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28014"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "NIÑO JESUS",
+    "diasRecogida": [
+      "CUARTO SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28009"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "IMPERIAL",
+    "diasRecogida": [
+      "PRIMER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28005"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ACACIAS",
+    "diasRecogida": [
+      "PRIMER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28005"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CHOPERA",
+    "diasRecogida": [
+      "PRIMER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28045"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "LEGAZPI",
+    "diasRecogida": [
+      "PRIMER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28045"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "DELICIAS",
+    "diasRecogida": [
+      "PRIMER VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28045"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PALOS DE MOGUER",
+    "diasRecogida": [
+      "PRIMER SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28045"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PALACIO",
+    "diasRecogida": [
+      "SEGUNDO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28005"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "EMBAJADORES",
+    "diasRecogida": [
+      "SEGUNDO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28012"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CORTES",
+    "diasRecogida": [
+      "SEGUNDO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28014"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "JUSTICIA",
+    "diasRecogida": [
+      "SEGUNDO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28004"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "UNIVERSIDAD",
+    "diasRecogida": [
+      "SEGUNDO VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28015"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "SOL",
+    "diasRecogida": [
+      "SEGUNDO SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28013"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PAVONES",
+    "diasRecogida": [
+      "TERCER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28030"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "HORCAJO",
+    "diasRecogida": [
+      "TERCER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28030"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "MARROQUINA",
+    "diasRecogida": [
+      "TERCER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28030"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "MEDIA LEGUA",
+    "diasRecogida": [
+      "TERCER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28030"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "FONTARRON",
+    "diasRecogida": [
+      "TERCER VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28030"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VINATEROS",
+    "diasRecogida": [
+      "TERCER SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28030"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VENTAS",
+    "diasRecogida": [
+      "CUARTO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28017"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PUEBLO NUEVO",
+    "diasRecogida": [
+      "CUARTO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28017"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "QUINTANA",
+    "diasRecogida": [
+      "CUARTO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28027"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CONCEPCION",
+    "diasRecogida": [
+      "CUARTO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28027"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "SAN PASCUAL",
+    "diasRecogida": [
+      "CUARTO VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28027"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "SAN JUAN BAUTISTA",
+    "diasRecogida": [
+      "CUARTO SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28043"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PINAR DEL REY",
+    "diasRecogida": [
+      "PRIMER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28033"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CANILLAS",
+    "diasRecogida": [
+      "PRIMER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28043"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CANILLEJAS",
+    "diasRecogida": [
+      "PRIMER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28022"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "VALDEFUENTES",
+    "diasRecogida": [
+      "PRIMER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28050"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "APOSTOL SANTIAGO",
+    "diasRecogida": [
+      "PRIMER VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28033"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CASCO H.VALLECAS",
+    "diasRecogida": [
+      "SEGUNDO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28031"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "SANTA EUGENIA",
+    "diasRecogida": [
+      "SEGUNDO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28031"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ENSANCHE VALLECAS (NORTE)",
+    "diasRecogida": [
+      "SEGUNDO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28031"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ENSANCHE VALLECAS (SUR)",
+    "diasRecogida": [
+      "SEGUNDO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28031"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PALOMERAS SURESTE (ZONA 1)",
+    "diasRecogida": [
+      "PRIMER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28018"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PALOMERAS SURESTE (ZONA 2)",
+    "diasRecogida": [
+      "PRIMER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28018"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PALOMERAS BAJAS (NORTE)",
+    "diasRecogida": [
+      "PRIMER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28018"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "PALOMERAS BAJAS (SUR)",
+    "diasRecogida": [
+      "PRIMER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28018"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "SAN DIEGO",
+    "diasRecogida": [
+      "PRIMER VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28053"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "NUMANCIA",
+    "diasRecogida": [
+      "PRIMER SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28038"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CASCO H.VICALVARO",
+    "diasRecogida": [
+      "SEGUNDO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28032"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "AMBROZ",
+    "diasRecogida": [
+      "SEGUNDO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28032"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "HELLIN",
+    "diasRecogida": [
+      "TERCER LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28037"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ROSAS",
+    "diasRecogida": [
+      "TERCER MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28022"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "REJAS",
+    "diasRecogida": [
+      "TERCER MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28022"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CANILLEJAS (NORTE)",
+    "diasRecogida": [
+      "TERCER JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28022"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CANILLEJAS (SUR)",
+    "diasRecogida": [
+      "TERCER VIERNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28022"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "SALVADOR",
+    "diasRecogida": [
+      "TERCER SABADO DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28055"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "ALAMEDA DE OSUNA",
+    "diasRecogida": [
+      "CUARTO LUNES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28042"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "AEROPUERTO",
+    "diasRecogida": [
+      "CUARTO MARTES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28042"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "TIMON",
+    "diasRecogida": [
+      "CUARTO MIERCOLES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28042"
+  },
+  {
+    "tipo": "Muebles",
+    "descripcion": "Recogida de muebles y enseres voluminosos.",
+    "zona": "CORRALEJOS",
+    "diasRecogida": [
+      "CUARTO JUEVES DEL MES"
+    ],
+    "horario": "20:00 - 22:00",
+    "citaPrevia": false,
+    "instrucciones": "Depositar los muebles en la acera entre las 20:00 y 22:00 del día asignado.",
+    "codigoPostal": "28042"
+  }
+]
