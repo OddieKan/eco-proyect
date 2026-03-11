@@ -1,0 +1,404 @@
+
+<!DOCTYPE html> <!-- Indica que es un documento HTML5 -->
+<html lang="es"> <!-- Inicio del documento, idioma español -->
+<head> <!-- Cabecera invisible -->
+<meta charset="UTF-8"> <!-- Permite tildes y caracteres especiales -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta a móviles -->
+<title>EcoPoint - Registrarse</title> <!-- Título en la pestaña -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap desde CDN -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Iconos de Google -->
+
+<style> 
+
+    body { /* Estilos del body */
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Fondo degradado morado */
+        min-height: 100vh; /* Altura mínima 100% de ventana */
+        margin: 0; /* Sin margen */
+        padding: 0; /* Sin padding */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+    }
+
+    .app-container { /* Contenedor principal */
+        background: rgb(241, 239, 244); /* Fondo gris claro */
+        min-height: 100vh; /* Altura mínima 100% */
+        width: 100%; /* Ancho completo */
+        display: flex; /* Flexbox */
+        flex-direction: column; /* Dirección vertical */
+    }
+
+    .header { /* Barra superior */
+        background: linear-gradient(135deg, #96df99 0%, #85e48a 100%); /* Fondo verde degradado */
+        color: white; /* Texto blanco */
+        padding: 30px; /* Espacio interno */
+        text-align: center; /* Texto centrado */
+        font-size: 32px; /* Tamaño letra grande */
+        font-weight: bold; /* Negrita */
+    }
+
+    .content { /* Zona central */
+        flex: 1; /* Ocupa espacio disponible */
+        padding: 60px 30px; /* Espacio interno */
+        text-align: center; /* Centrado */
+        max-width: 600px; /* Ancho máximo contenido */
+        margin: 0 auto; /* Centra horizontalmente */
+    }
+
+    .EcoPoint { /* Texto EcoPoint */
+        font-size: 40px; /* Tamaño grande */
+        font-weight: bold; /* Negrita */
+        color: #131413; /* Negro */
+        margin-bottom: 30px; /* Margen abajo */
+    }
+
+    .title-row { /* Fila título con logo */
+        display: flex; /* Flexbox */
+        align-items: center; /* Centra verticalmente */
+        justify-content: center; /* Centra horizontalmente */
+        gap: 20px; /* Espacio entre logo y título */
+        margin-bottom: 40px; /* Margen abajo */
+    }
+
+    .title-row img { /* Logo */
+        width: 100px; /* Ancho */
+        height: 80px; /* Alto */
+        object-fit: contain; /* Ajuste imagen */
+    }
+
+    .title { /* Título "Registrarse" */
+        font-size: 32px; /* Tamaño grande */
+        font-weight: bold; /* Negrita */
+        color: #333; /* Gris oscuro */
+        margin: 0; /* Sin margen */
+    }
+
+    .form-card { /* Tarjeta del formulario */
+        background: #f8f9fa; /* Fondo gris claro */
+        padding: 40px; /* Espacio interno */
+        border-radius: 20px; /* Bordes redondeados */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* Sombra suave */
+    }
+
+    .input-group { /* Grupo de input */
+        margin-bottom: 25px; /* Margen abajo */
+        text-align: left; /* Texto alineado izquierda */
+    }
+
+    .input-group label { /* Etiquetas */
+        display: block; /* Ocupa línea completa */
+        font-size: 16px; /* Tamaño */
+        font-weight: 600; /* Semi-negrita */
+        color: #555; /* Gris medio */
+        margin-bottom: 8px; /* Separación con input */
+    }
+
+    .input-group input { /* Campos de texto */
+        width: 100%; /* Ancho completo */
+        padding: 15px; /* Espacio interno */
+        font-size: 16px; /* Tamaño letra */
+        border: 2px solid #ddd; /* Borde gris */
+        border-radius: 10px; /* Bordes redondeados */
+        box-sizing: border-box; /* Incluye padding en width */
+        transition: all 0.3s; /* Transición suave */
+    }
+
+    .input-group input:focus { /* Input cuando está activo */
+        border-color: #4CAF50; /* Borde verde */
+        outline: none; /* Sin outline */
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1); /* Sombra verde suave */
+    }
+
+    .input-group input.input-error { /* Campo con error: borde rojo */
+        border-color: #e53935; /* Borde rojo */
+        box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.1); /* Sombra roja suave */
+    }
+
+    .error-msg { /* Texto de error debajo del campo */
+        display: none; /* Oculto por defecto */
+        color: #e53935; /* Color rojo */
+        font-size: 13px; /* Tamaño pequeño */
+        margin-top: 5px; /* Separación del input */
+        font-weight: 500; /* Semi-negrita */
+    }
+
+    .error-msg.visible { /* Cuando el error debe mostrarse */
+        display: block; /* Se hace visible */
+    }
+
+    .terminos { /* Contenedor términos y condiciones */
+        text-align: left; /* Alineado izquierda */
+        margin: 20px 0 25px; /* Márgenes */
+        display: flex; /* Flexbox */
+        align-items: center; /* Centra verticalmente */
+        gap: 10px; /* Espacio entre checkbox y texto */
+    }
+
+    .terminos input[type="checkbox"] { /* Checkbox */
+        width: 18px; /* Ancho */
+        height: 18px; /* Alto */
+        cursor: pointer; /* Cursor mano */
+    }
+
+    .terminos label { /* Label del checkbox */
+        font-size: 14px; /* Tamaño pequeño */
+        color: #555; /* Gris medio */
+        cursor: pointer; /* Cursor mano */
+        margin: 0; /* Sin margen */
+    }
+
+    .terminos a { /* Enlace términos */
+        color: #4CAF50; /* Verde */
+        text-decoration: none; /* Sin subrayado */
+    }
+
+    .terminos a:hover { /* Hover enlace */
+        text-decoration: underline; /* Subrayado al pasar ratón */
+    }
+
+    .error-terminos { /* Error específico del checkbox */
+        display: none; /* Oculto por defecto */
+        color: #e53935; /* Color rojo */
+        font-size: 13px; /* Tamaño pequeño */
+        margin-top: -15px; /* Sube para pegarse al checkbox */
+        margin-bottom: 15px; /* Separación con el botón */
+        text-align: left; /* Alineado izquierda */
+        font-weight: 500; /* Semi-negrita */
+    }
+
+    .error-terminos.visible { /* Cuando el error del checkbox debe mostrarse */
+        display: block; /* Se hace visible */
+    }
+
+    .btn-acceder { /* Botón de registrar */
+        background: #333; /* Fondo negro */
+        color: white; /* Texto blanco */
+        border: none; /* Sin borde */
+        padding: 15px 40px; /* Espacio interno */
+        border-radius: 25px; /* Bordes muy redondeados */
+        font-size: 18px; /* Tamaño letra */
+        font-weight: 600; /* Semi-negrita */
+        width: 100%; /* Ancho completo */
+        cursor: pointer; /* Cursor mano */
+        transition: all 0.3s; /* Transición suave */
+    }
+
+    .btn-acceder:hover { /* Hover botón */
+        background: #4CAF50; /* Fondo verde */
+        transform: translateY(-2px); /* Eleva 2px */
+        box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3); /* Sombra verde */
+    }
+
+    .bottom-nav { /* Barra navegación inferior */
+        background: #f8f9fa; /* Fondo gris claro */
+        padding: 20px 0; /* Espacio arriba/abajo */
+        display: flex; /* Flexbox */
+        justify-content: center; /* Centra iconos */
+        gap: 50px; /* Espacio entre iconos */
+        align-items: center; /* Centra verticalmente */
+        border-top: 1px solid #e0e0e0; /* Línea superior */
+    }
+
+    .bottom-nav .material-icons { /* Iconos navegación */
+        font-size: 32px; /* Tamaño grande */
+        color: #999; /* Gris */
+        cursor: pointer; /* Cursor mano */
+        transition: all 0.3s; /* Transición suave */
+    }
+
+    .bottom-nav .material-icons:hover { /* Hover iconos */
+        color: #4CAF50; /* Verde */
+        transform: scale(1.2); /* Agranda 20% */
+    }
+
+    .bottom-nav .material-icons.active { /* Icono activo */
+        color: #4CAF50; /* Verde */
+    }
+
+    .bottom-nav .material-icons.profile { /* Icono perfil */
+        background: #9e8fbe; /* Fondo morado claro */
+        color: white; /* Blanco */
+        padding: 10px; /* Espacio interno */
+        border-radius: 50%; /* Circular */
+    }
+
+    .bottom-nav .material-icons.profile:hover { /* Hover perfil */
+        background: #2bb158; /* Verde oscuro */
+    }
+
+    @media (max-width: 768px) { /* Si pantalla menor 768px */
+        .header { font-size: 24px; padding: 20px; } /* Header más pequeño en móvil */
+        .EcoPoint { font-size: 28px; } /* Texto EcoPoint más pequeño */
+        .title { font-size: 24px; } /* Título más pequeño */
+        .title-row img { width: 70px; height: 55px; } /* Logo más pequeño */
+        .form-card { padding: 25px; } /* Menos padding en formulario */
+        .content { padding: 40px 20px; } /* Menos padding lateral */
+        .bottom-nav { gap: 30px; } /* Menos espacio entre iconos */
+        .bottom-nav .material-icons { font-size: 28px; } /* Iconos más pequeños */
+    }
+
+</style> <!-- Cierra estilos -->
+</head> <!-- Cierra head -->
+
+<body> <!-- Contenido visible -->
+
+<div class="app-container"> <!-- Contenedor principal pantalla completa -->
+
+    <!-- HEADER -->
+    <div class="header"> <!-- Barra superior -->
+    </div> <!-- Cierra header -->
+
+    <!-- CONTENIDO -->
+    <div class="content"> <!-- Zona central -->
+        <p class="EcoPoint">EcoPoint</p> <!-- Texto EcoPoint en negrita -->
+
+        <!-- TÍTULO CON LOGO -->
+        <div class="title-row"> <!-- Fila que pone logo y título en horizontal -->
+            <img src="imagenes/logo.png" alt="Logo"> <!-- Logo -->
+            <h2 class="title">Registrarse</h2> <!-- Título grande -->
+        </div> <!-- Cierra title-row -->
+
+        <!-- FORMULARIO -->
+        <div class="form-card"> <!-- Tarjeta blanca que contiene el formulario -->
+
+            <!-- NOMBRE -->
+            <div class="input-group"> <!-- Grupo: label + input de nombre -->
+                <label>Nombre</label> <!-- Etiqueta encima del campo -->
+                <input type="text" id="inputNombre" placeholder="Tu nombre"> <!-- Campo de texto, id para identificarlo en JS -->
+                <span class="error-msg" id="errorNombre"></span> <!-- Span donde aparece el mensaje de error del nombre -->
+            </div> <!-- Cierra input-group nombre -->
+
+            <!-- APELLIDOS -->
+            <div class="input-group"> <!-- Grupo: label + input de apellidos -->
+                <label>Apellidos</label> <!-- Etiqueta encima del campo -->
+                <input type="text" id="inputApellidos" placeholder="Tus apellidos"> <!-- Campo de texto, id para identificarlo en JS -->
+                <span class="error-msg" id="errorApellidos"></span> <!-- Span donde aparece el mensaje de error de apellidos -->
+            </div> <!-- Cierra input-group apellidos -->
+
+            <!-- CORREO -->
+            <div class="input-group"> <!-- Grupo: label + input de correo -->
+                <label>Correo</label> <!-- Etiqueta encima del campo -->
+                <input type="email" id="inputCorreo" placeholder="email@correo.com"> <!-- Campo email, id para identificarlo en JS -->
+                <span class="error-msg" id="errorCorreo"></span> <!-- Span donde aparece el mensaje de error del correo -->
+            </div> <!-- Cierra input-group correo -->
+
+            <!-- CONTRASEÑA -->
+            <div class="input-group"> <!-- Grupo: label + input de contraseña -->
+                <label>Contraseña</label> <!-- Etiqueta encima del campo -->
+                <input type="password" id="inputPassword" placeholder="min. 6 caracteres"> <!-- Campo que oculta lo escrito, id para JS -->
+                <span class="error-msg" id="errorPassword"></span> <!-- Span donde aparece el mensaje de error de contraseña -->
+            </div> <!-- Cierra input-group contraseña -->
+
+            <!-- TÉRMINOS Y CONDICIONES -->
+            <div class="terminos"> <!-- Contenedor del checkbox -->
+                <input type="checkbox" id="terminos"> <!-- Casilla de verificación -->
+                <label for="terminos"> <!-- Etiqueta enlazada al checkbox -->
+                    He leído y acepto los <!-- Texto del label -->
+                    <a href="#">términos y condiciones</a> <!-- Enlace en verde -->
+                </label> <!-- Cierra label -->
+            </div> <!-- Cierra terminos -->
+            <span class="error-terminos" id="errorTerminos">Debes aceptar los términos y condiciones</span> <!-- Error si no se marca el checkbox -->
+
+            <button class="btn-acceder" onclick="validarFormulario()">Registrar</button> <!-- Botón que llama a la función de validación -->
+
+        </div> <!-- Cierra form-card -->
+
+    </div> <!-- Cierra content -->
+
+    <!-- BOTTOM NAVIGATION -->
+    <div class="bottom-nav"> <!-- Barra inferior de navegación -->
+        <span class="material-icons active">home</span> <!-- Icono casa activo, verde -->
+        <span class="material-icons">search</span> <!-- Icono lupa -->
+        <span class="material-icons">notifications_none</span> <!-- Icono campana -->
+        <span class="material-icons profile">person</span> <!-- Icono persona con fondo morado -->
+    </div> <!-- Cierra bottom-nav -->
+
+</div> <!-- Cierra app-container -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> <!-- JavaScript de Bootstrap -->
+
+<script> <!-- Inicio del bloque JavaScript de validación -->
+
+    const nombresRegistrados = ["admin", "usuario1", "ecopoint"]; /* Lista de nombres ya registrados (simulada) */
+
+    function validarFormulario() { /* Función principal que valida todos los campos al pulsar Registrar */
+        let valido = true; /* Variable que controla si el formulario es válido, empieza en true */
+
+        limpiarErrores(); /* Limpia todos los errores anteriores antes de validar de nuevo */
+
+        const nombre    = document.getElementById("inputNombre"); /* Obtiene el input de nombre */
+        const apellidos = document.getElementById("inputApellidos"); /* Obtiene el input de apellidos */
+        const correo    = document.getElementById("inputCorreo"); /* Obtiene el input de correo */
+        const password  = document.getElementById("inputPassword"); /* Obtiene el input de contraseña */
+        const terminos  = document.getElementById("terminos"); /* Obtiene el checkbox de términos */
+
+        /* Validar NOMBRE */
+        if (nombre.value.trim() === "") { /* Si el campo nombre está vacío */
+            mostrarError("inputNombre", "errorNombre", "Este campo es obligatorio"); /* Muestra error de campo obligatorio */
+            valido = false; /* El formulario no es válido */
+        } else if (nombresRegistrados.includes(nombre.value.trim().toLowerCase())) { /* Si el nombre ya está registrado */
+            mostrarError("inputNombre", "errorNombre", "El nombre de usuario ya está en uso"); /* Muestra error de nombre en uso */
+            valido = false; /* El formulario no es válido */
+        }
+
+        /* Validar APELLIDOS */
+        if (apellidos.value.trim() === "") { /* Si el campo apellidos está vacío */
+            mostrarError("inputApellidos", "errorApellidos", "Este campo es obligatorio"); /* Muestra error de campo obligatorio */
+            valido = false; /* El formulario no es válido */
+        }
+
+        /* Validar CORREO */
+        if (correo.value.trim() === "") { /* Si el campo correo está vacío */
+            mostrarError("inputCorreo", "errorCorreo", "Este campo es obligatorio"); /* Muestra error de campo obligatorio */
+            valido = false; /* El formulario no es válido */
+        } else if (!formatoEmailValido(correo.value.trim())) { /* Si el correo no tiene formato válido */
+            mostrarError("inputCorreo", "errorCorreo", "El formato del email no es válido"); /* Muestra error de formato incorrecto */
+            valido = false; /* El formulario no es válido */
+        }
+
+        /* Validar CONTRASEÑA */
+        if (password.value.trim() === "") { /* Si el campo contraseña está vacío */
+            mostrarError("inputPassword", "errorPassword", "Este campo es obligatorio"); /* Muestra error de campo obligatorio */
+            valido = false; /* El formulario no es válido */
+        } else if (password.value.length < 6) { /* Si la contraseña tiene menos de 6 caracteres */
+            mostrarError("inputPassword", "errorPassword", "La contraseña debe tener mínimo 6 caracteres"); /* Muestra error de longitud */
+            valido = false; /* El formulario no es válido */
+        }
+
+        /* Validar TÉRMINOS */
+        if (!terminos.checked) { /* Si el checkbox no está marcado */
+            document.getElementById("errorTerminos").classList.add("visible"); /* Muestra el error de términos */
+            valido = false; /* El formulario no es válido */
+        }
+
+        if (valido) { /* Si todos los campos son válidos */
+            alert("¡Registro completado con éxito!"); /* Muestra mensaje de éxito */
+            /* Aquí puedes redirigir o enviar el formulario a la base de datos */
+        }
+    } /* Cierra función validarFormulario */
+
+    function mostrarError(inputId, errorId, mensaje) { /* Función que muestra el error en un campo concreto */
+        document.getElementById(inputId).classList.add("input-error"); /* Pone el borde rojo al input */
+        const span = document.getElementById(errorId); /* Obtiene el span del error */
+        span.textContent = mensaje; /* Escribe el mensaje de error */
+        span.classList.add("visible"); /* Hace visible el span */
+    } /* Cierra función mostrarError */
+
+    function limpiarErrores() { /* Función que elimina todos los errores visibles */
+        const inputs = document.querySelectorAll(".input-group input"); /* Selecciona todos los inputs del formulario */
+        inputs.forEach(input => input.classList.remove("input-error")); /* Quita el borde rojo de cada input */
+
+        const errores = document.querySelectorAll(".error-msg"); /* Selecciona todos los spans de error */
+        errores.forEach(e => { e.textContent = ""; e.classList.remove("visible"); }); /* Vacía y oculta cada error */
+
+        document.getElementById("errorTerminos").classList.remove("visible"); /* Oculta el error del checkbox */
+    } /* Cierra función limpiarErrores */
+
+    function formatoEmailValido(email) { /* Función que comprueba si el email tiene formato correcto */
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; /* Expresión regular: texto + @ + texto + . + texto */
+        return regex.test(email); /* Devuelve true si el email es válido, false si no */
+    } /* Cierra función formatoEmailValido */
+
+</script> <!-- Cierra bloque JavaScript -->
+
+</body> <!-- Fin del contenido -->
+</html> <!-- Fin del documento -->
