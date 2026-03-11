@@ -6,7 +6,7 @@ const Recogida = require('../models/Recogida.js');
 // GET /api/recogidas
 router.get('/', async (req, res) => {
   try {
-    const recogidas = await Recogida.find();
+    const recogidas = await Recogida.find().populate('usuario');
     res.json(recogidas);
   } catch (error) {
     res.status(500).json({ error: error.message });

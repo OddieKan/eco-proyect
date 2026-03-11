@@ -1,4 +1,4 @@
-const mongoose = Require("mongoose");
+const mongoose = require("mongoose");
 const residuoSchema = new mongoose.Schema({
     nombre: {
         type: String,
