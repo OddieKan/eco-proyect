@@ -90,3 +90,29 @@ body {
     .bottom-nav { gap: 30px; }
     .bottom-nav .material-icons { font-size: 28px; }
 }
+
+/* Mensajes de error formularios */
+.error-msg {
+    display: none; /* Oculto por defecto */
+    color: #e53935; /* Color rojo */
+    font-size: 13px; /* Tamaño pequeño */
+    margin-top: 5px; /* Separación del input */
+    font-weight: 500; /* Semi-negrita */
+}
+
+.error-msg.visible {
+    display: block; /* Se hace visible */
+}
+
+.error-terminos {
+    display: none; /* Oculto por defecto */
+    color: #e53935; /* Color rojo */
+    font-size: 13px; /* Tamaño pequeño */
+    margin-bottom: 15px; /* Separación con el botón */
+    text-align: left; /* Alineado izquierda */
+    font-weight: 500; /* Semi-negrita */
+}
+
+.error-terminos.visible {
+    display: block; /* Se hace visible */
+}

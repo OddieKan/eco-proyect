@@ -53,23 +53,23 @@
             <!-- CORREO -->
             <div class="mb-3"> <!-- Margen inferior entre input -->
                 <label class="form-label">Correo</label> 
-                <input type="email" id="inputCorreo" placeholder="email@correo.com" class="form-control"> <!-- Campo email, id para identificarlo en JS -->
+                <input type="email" id="inputCorreo" placeholder="email@correo.com" class="form-control"> 
                 <span class="error-msg" id="errorCorreo"></span> <!-- Span donde aparece el mensaje de error del correo -->
             </div> <!-- Cierra input-group correo -->
 
             <!-- CONTRASEÑA -->
-            <div class="input-group"> <!-- Margen inferior entre input -->
-                <label>Contraseña</label> 
-                <input type="password" id="inputPassword" placeholder="min. 6 caracteres"> <!-- Campo que oculta lo escrito, id para JS -->
+            <div class="mb-3"> <!-- Margen inferior entre input -->
+                <label class="form-label">Contraseña</label> 
+                <input type="password" id="inputPassword" placeholder="min. 6 caracteres" class="form-control">
                 <span class="error-msg" id="errorPassword"></span> <!-- Span donde aparece el mensaje de error de contraseña -->
             </div> <!-- Cierra input-group contraseña -->
 
             <!-- TÉRMINOS Y CONDICIONES -->
-            <div class="terminos"> <!-- Contenedor del checkbox -->
-                <input type="checkbox" id="terminos"> <!-- Casilla de verificación -->
-                <label for="terminos"> <!-- Etiqueta enlazada al checkbox -->
-                    He leído y acepto los <!-- Texto del label -->
-                    <a href="#">términos y condiciones</a> <!-- Enlace en verde -->
+            <div class="form-check mb-3"> <!-- Contenedor boostrap del checkbox -->
+                <input type="checkbox" id="terminos" class="form-check-input"> <!-- Casilla de verificación con boostrap -->
+                <label for="terminos" class="form-check-label"> <!-- Etiqueta enlazada al checkbox -->
+                    He leído y acepto los 
+                    <a href="#" class="text-success">términos y condiciones</a> <!-- Enlace en verde -->
                 </label> <!-- Cierra label -->
             </div> <!-- Cierra terminos -->
             <span class="error-terminos" id="errorTerminos">Debes aceptar los términos y condiciones</span> <!-- Error si no se marca el checkbox -->
