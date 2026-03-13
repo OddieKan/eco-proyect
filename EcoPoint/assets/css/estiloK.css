@@ -1,0 +1,92 @@
+/* Estilos propios de EcoPoint - Kndy */
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+    background: rgb(241, 239, 244);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: linear-gradient(135deg, #96df99 0%, #85e48a 100%);
+    padding: 30px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+.brand-name {
+    font-size: 48px;
+    font-weight: bold;
+    color: #101210;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 150px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #646363;
+    margin: 40px 0;
+    line-height: 1.6;
+}
+
+.bottom-nav {
+    background: #f8f9fa;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.bottom-nav .material-icons {
+    font-size: 32px;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bottom-nav .material-icons:hover {
+    color: #4CAF50;
+    transform: scale(1.2);
+}
+
+.bottom-nav .material-icons.active {
+    color: #4CAF50;
+}
+
+.bottom-nav .material-icons.profile {
+    background: #9e8fbe;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.bottom-nav .material-icons.profile:hover {
+    background: #2bb158;
+}
+
+@media (max-width: 768px) {
+    .header { font-size: 24px; padding: 20px; }
+    .brand-name { font-size: 32px; }
+    .logo-container img { width: 98px; height: 160px; }
+    .subtitle { font-size: 16px; }
+    .bottom-nav { gap: 30px; }
+    .bottom-nav .material-icons { font-size: 28px; }
+}
