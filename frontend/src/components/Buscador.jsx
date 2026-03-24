@@ -13,12 +13,12 @@ const Buscador = () => {
         setError('');
 
         try{
-            const response = await axios.get(`http://localhost:5000/api/recogidas?nombre=${busqueda}`);
+            const response = await axios.get(`http://localhost:4000/api/recogidas?nombre=${busqueda}`);
 
             //se guarda larespuiesta en el estado "resultado"
             setResultado(response.data);
         } catch (err){
-            setError('No encontramos ese residuo. ¡ASyudanos a mejorar sugiriéndolo');
+            setError('No encontramos ese residuo. ¡Ayudanos a mejorar sugiriéndolo');
             setResultado(null);
         }
     };
@@ -42,7 +42,7 @@ const Buscador = () => {
         <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '10px' }}>
           <h3>Resultado:</h3>
           <p><strong>Depósitalo en:</strong> {resultado.contenedor}</p> [cite: 29, 32]
-          <p><em>Consejo: {resultado.consejo}</em></p> [cite: 228]
+          <p><em>Consejo: {resultado.consejos}</em></p> [cite: 228]
         </div>
         )}
         {error && <p style={{color: 'red'}}> {error}</p>}
