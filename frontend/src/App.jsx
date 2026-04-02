@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Home from './components/Home';
 import Registro from './components/Registro';
 import Login from './components/Login';
+import Bienvenida from './components/Bienvenida';
+import Volviste from './components/Volviste';
 
 function App() {
 
@@ -42,7 +44,7 @@ function App() {
       {/* NAVBAR */}
       <nav style={navStyle}>
 
-        <div 
+        <div
           style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
           onClick={() => setVistaActual('home')}
         >
@@ -67,7 +69,7 @@ function App() {
       </nav>
 
       {/* CONTENIDO */}
-      <div style={{ width: '100%'}}>
+      <div style={{ width: '100%' }}>
 
         {vistaActual === 'home' && <Home />}
 
@@ -75,13 +77,28 @@ function App() {
           <Registro
             irHome={() => setVistaActual('home')}
             irLogin={() => setVistaActual('login')}
+            irBienvenida={() => setVistaActual('bienvenida')}
           />
         )}
 
         {vistaActual === 'login' && (
-          <Login irHome={() => setVistaActual('home')} />
+          <Login
+            irHome={() => setVistaActual('home')}
+            irRegistro={() => setVistaActual('registro')}
+            irVolviste={() => setVistaActual('volviste')}
+          />
         )}
 
+        {/* Vista bienvenida - para nuevos usuarios tras registro */}
+        {vistaActual === 'bienvenida' && (
+          <Bienvenida irHome={() => setVistaActual('home')} />
+        )}
+
+        {/* Vista volviste - para usuarios que regresan tras login */}
+        {vistaActual === 'volviste' && (
+          <Volviste irHome={() => setVistaActual('home')} />
+        )}
+        
       </div>
 
       {/* FOOTER */}

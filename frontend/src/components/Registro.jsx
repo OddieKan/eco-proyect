@@ -41,7 +41,7 @@ const Registro = ({ irHome, irLogin }) => {
 
       setTimeout(() => {
         irLogin();
-      }, 1500);
+      }, 5000);
 
     } catch (error) {
 
