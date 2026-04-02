@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Registro = ({ irHome, irLogin }) => {
+const Registro = ({ irHome, irLogin, irBienvenida}) => {
 
   const [formData, setFormData] = useState({
     nombre: '',
@@ -40,7 +40,7 @@ const Registro = ({ irHome, irLogin }) => {
       setMensaje('Registro exitoso');
 
       setTimeout(() => {
-        irLogin();
+        irBienvenida();
       }, 5000);
 
     } catch (error) {
