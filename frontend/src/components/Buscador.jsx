@@ -17,7 +17,7 @@ const Buscador = () => {
 
             //se guarda larespuiesta en el estado "resultado"
             setResultado(response.data);
-        } catch (err){
+        } catch {
             setError('No encontramos ese residuo. ¡Ayudanos a mejorar sugiriéndolo');
             setResultado(null);
         }
@@ -41,8 +41,8 @@ const Buscador = () => {
         {resultado && (
         <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '10px' }}>
           <h3>Resultado:</h3>
-          <p><strong>Depósitalo en:</strong> {resultado.contenedor}</p> [cite: 29, 32]
-          <p><em>Consejo: {resultado.consejos}</em></p> [cite: 228]
+          <p><strong>Depósitalo en:</strong> {resultado.contenedor}</p>
+          <p><em>Consejo: {resultado.consejos}</em></p>
         </div>
         )}
         {error && <p style={{color: 'red'}}> {error}</p>}
