@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Home from './components/Home';
 import Registro from './components/Registro';
 import Login from './components/Login';
 import Bienvenida from './components/Bienvenida';
-import Volviste from './components/Volviste';
 
 function App() {
-
   const [vistaActual, setVistaActual] = useState('home');
+  const [usuarioLogueado, setUsuarioLogueado] = useState(false);
+
+  // Detectar si hay sesión activa al cargar la app
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setUsuarioLogueado(true);
+    }
+  }, []);
 
   const navStyle = {
     display: 'flex',
@@ -38,12 +45,17 @@ function App() {
     color: 'white'
   };
 
+  const cerrarSesion = () => {
+    localStorage.removeItem("token");
+    setUsuarioLogueado(false);
+    setVistaActual('home');
+  };
+
   return (
     <div style={{ backgroundColor: '#F9FBF2', minHeight: '100vh', fontFamily: '"Segoe UI", Roboto, Arial, sans-serif' }}>
 
       {/* NAVBAR */}
       <nav style={navStyle}>
-
         <div
           style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
           onClick={() => setVistaActual('home')}
@@ -57,15 +69,25 @@ function App() {
             Inicio
           </button>
 
-          <button style={linkStyle} onClick={() => setVistaActual('login')}>
-            Iniciar Sesión
-          </button>
+          {/* SI NO ESTÁ LOGUEADO */}
+          {!usuarioLogueado && (
+            <>
+              <button style={linkStyle} onClick={() => setVistaActual('login')}>
+                Iniciar Sesión
+              </button>
+              <button style={botonRegistroStyle} onClick={() => setVistaActual('registro')}>
+                Registrarse
+              </button>
+            </>
+          )}
 
-          <button style={botonRegistroStyle} onClick={() => setVistaActual('registro')}>
-            Registrarse
-          </button>
+          {/* SI ESTÁ LOGUEADO */}
+          {usuarioLogueado && (
+            <button style={linkStyle} onClick={cerrarSesion}>
+              Cerrar sesión
+            </button>
+          )}
         </div>
-
       </nav>
 
       {/* CONTENIDO */}
@@ -73,7 +95,8 @@ function App() {
 
         {vistaActual === 'home' && <Home />}
 
-        {vistaActual === 'registro' && (
+        {/* Registro redirige a Bienvenida */}
+        {vistaActual === 'registro' && !usuarioLogueado && (
           <Registro
             irHome={() => setVistaActual('home')}
             irLogin={() => setVistaActual('login')}
@@ -81,24 +104,19 @@ function App() {
           />
         )}
 
-        {vistaActual === 'login' && (
+        {vistaActual === 'login' && !usuarioLogueado && (
           <Login
             irHome={() => setVistaActual('home')}
             irRegistro={() => setVistaActual('registro')}
-            irVolviste={() => setVistaActual('volviste')}
+            setUsuarioLogueado={setUsuarioLogueado}
           />
         )}
 
-        {/* Vista bienvenida - para nuevos usuarios tras registro */}
+        {/* Vista Bienvenida para nuevos usuarios */}
         {vistaActual === 'bienvenida' && (
           <Bienvenida irHome={() => setVistaActual('home')} />
         )}
 
-        {/* Vista volviste - para usuarios que regresan tras login */}
-        {vistaActual === 'volviste' && (
-          <Volviste irHome={() => setVistaActual('home')} />
-        )}
-        
       </div>
 
       {/* FOOTER */}

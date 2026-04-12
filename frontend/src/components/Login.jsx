@@ -1,54 +1,65 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// Recibe la prop irHome desde App.jsx para volver al inicio tras login
-const Login = ({ irRegistro, irVolviste }) => {
+const Login = ({ irHome, irRegistro, setUsuarioLogueado }) => {
 
-  // Estado del formulario - guarda lo que escribe el usuario
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
 
-  const [mensaje, setMensaje] = useState('');   // Mensajes de error o éxito
-  const [cargando, setCargando] = useState(false); // Controla el botón mientras espera
+  const [mensaje, setMensaje] = useState('');
 
-  // Se ejecuta cada vez que el usuario escribe en un input
+  const inputStyle = {
+    width: '100%',
+    padding: '12px',
+    margin: '10px 0',
+    borderRadius: '8px',
+    border: '1px solid #dfe6e9',
+    backgroundColor: '#fff',
+    boxSizing: 'border-box'
+  };
+
+  const btnAcceder = {
+    width: '100%',
+    padding: '12px',
+    backgroundColor: '#2D3436',
+    color: 'white',
+    border: 'none',
+    borderRadius: '8px',
+    cursor: 'pointer',
+    marginTop: '10px',
+    fontSize: '16px'
+  };
+
   const handleChange = (e) => {
     setFormData({
-      ...formData,           // Mantiene los otros campos
-      [e.target.name]: e.target.value  // Actualiza solo el campo que cambió
+      ...formData,
+      [e.target.name]: e.target.value
     });
   };
 
-  // Se ejecuta al pulsar "Acceder"
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Evita que la página se recargue
+    e.preventDefault();
 
     try {
-      setCargando(true);
-
-      // Llama al backend con email y contraseña
-      await axios.post(
+      const res = await axios.post(
         'http://localhost:4000/api/usuarios/login',
         formData
       );
+      localStorage.setItem("token", res.data.token);
+      setUsuarioLogueado(true);
+      setMensaje('Login correcto');
 
-      setMensaje('¡Bienvenido/a!');
-
-      // Espera 1.5 segundos y vuelve al home
       setTimeout(() => {
-        irVolviste();
-      }, 1500);
+        irHome();
+      }, 1000);
 
     } catch (error) {
-      // Muestra el mensaje de error que devuelve el backend
       setMensaje(
         error.response?.data?.error ||
-        'Email o contraseña incorrectos'
+        'Error al iniciar sesión'
       );
-    } finally {
-      setCargando(false);
     }
   };
 
@@ -62,21 +73,23 @@ const Login = ({ irRegistro, irVolviste }) => {
       boxShadow: '0 10px 25px rgba(0,0,0,0.05)',
       textAlign: 'center'
     }}>
+      
+      <img 
+        src="https://cdn-icons-png.flaticon.com/512/3299/3299935.png" 
+        alt="logo" 
+        width="60" 
+      />
 
-      <img src="/logo-ecopoint.png" alt="logo" width="60" />
       <h2 style={{ margin: '20px 0' }}>Iniciar Sesión</h2>
 
-      {/* Mensaje de éxito o error */}
       {mensaje && (
-        <p style={{ color: mensaje.includes('Bienvenido') ? '#27ae60' : 'red' }}>
+        <p style={{ color: '#27ae60' }}>
           {mensaje}
         </p>
       )}
 
-      <form
-        onSubmit={handleSubmit}
-        style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}
-      >
+      <form onSubmit={handleSubmit}>
+        
         <input
           name="email"
           type="email"
@@ -94,50 +107,32 @@ const Login = ({ irRegistro, irVolviste }) => {
           onChange={handleChange}
           required
         />
-
-        <p style={{ textAlign: 'right', fontSize: '12px', color: '#636e72' }}>
+        
+        <p style={{
+          textAlign: 'right',
+          fontSize: '12px',
+          color: '#636e72',
+          cursor: 'pointer'
+        }}>
           ¿Olvidaste la contraseña?
         </p>
 
-        <button
-          type="submit"
-          style={botonStyle}
-          disabled={cargando}
-        >
-          {cargando ? 'Accediendo...' : 'Acceder'}
+        <button type="submit" style={btnAcceder}>
+          Acceder
         </button>
-
       </form>
-
+      
       <p style={{ marginTop: '20px', fontSize: '14px' }}>
         ¿No tienes cuenta?{' '}
-        <span
+        <span 
+          style={{ color: '#27ae60', cursor: 'pointer', fontWeight: 'bold' }} 
           onClick={irRegistro}
-          style={{ color: '#27ae60', cursor: 'pointer', fontWeight: 'bold' }}
         >
           Regístrate
         </span>
       </p>
-
     </div>
   );
-};
-
-const inputStyle = {
-  padding: '12px',
-  borderRadius: '8px',
-  border: '1px solid #ddd'
-};
-
-const botonStyle = {
-  backgroundColor: '#2D3436',
-  border: 'none',
-  padding: '14px',
-  borderRadius: '8px',
-  color: 'white',
-  fontWeight: 'bold',
-  cursor: 'pointer',
-  fontSize: '16px'
 };
 
 export default Login;
