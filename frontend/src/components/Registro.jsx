@@ -25,10 +25,26 @@ const Registro = ({ irHome, irLogin, irBienvenida }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formData.password.length < 6) {
-      setMensaje('La contraseña debe tener mínimo 6 caracteres');
-      return;
-    }
+   if (formData.nombre.length < 2) {
+  setMensaje('El nombre debe tener mínimo 2 caracteres');
+  return;
+}
+
+if (formData.apellido.length < 2) {
+  setMensaje('El apellido debe tener mínimo 2 caracteres');
+  return;
+}
+
+const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!regexEmail.test(formData.email)) {
+  setMensaje('El formato del email no es válido');
+  return;
+}
+
+if (formData.password.length < 6) {
+  setMensaje('La contraseña debe tener mínimo 6 caracteres');
+  return;
+}
 
     try {
 
