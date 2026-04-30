@@ -14,6 +14,7 @@ const Registro = ({ irHome, irLogin, irBienvenida }) => {
 
   const [mensaje, setMensaje] = useState('');
   const [cargando, setCargando] = useState(false);
+  const [aceptaTerminos, setAceptaTerminos] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -43,6 +44,11 @@ if (!regexEmail.test(formData.email)) {
 
 if (formData.password.length < 6) {
   setMensaje('La contraseña debe tener mínimo 6 caracteres');
+  return;
+}
+
+if (!aceptaTerminos) {
+  setMensaje('Debes aceptar los términos y condiciones');
   return;
 }
 
@@ -89,7 +95,7 @@ if (formData.password.length < 6) {
       </div>
 
       {mensaje && (
-        <p style={{ textAlign: 'center', color: '#27ae60' }}>
+        <p style={{ textAlign: 'center', color: '#ff0000' }}>
           {mensaje}
         </p>
       )}
@@ -132,6 +138,18 @@ if (formData.password.length < 6) {
           onChange={handleChange}
           required
         />
+
+         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <input
+            type="checkbox"
+            id="terminos"
+            checked={aceptaTerminos}
+            onChange={(e) => setAceptaTerminos(e.target.checked)}
+          />
+          <label htmlFor="terminos" style={{ fontSize: '14px', color: '#666' }}>
+            Acepto los términos y condiciones de uso
+          </label>
+        </div>
 
         <button
           type="submit"

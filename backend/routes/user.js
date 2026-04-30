@@ -13,7 +13,7 @@ router.post('/registro', async (req, res) => {
             return res.status(400).json({ error: "El email ya está registrado" });
         }
 
-        // 🔥 ENCRIPTAR CONTRASEÑA
+        // ENCRIPTAR CONTRASEÑA
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const nuevoUsuario = new User({
