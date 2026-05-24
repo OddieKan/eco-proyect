@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User.js');
-const bcrypt = require('bcrypt'); // 🔥 IMPORTANTE
+const bcrypt = require('bcrypt'); 
+const jwt = require('jsonwebtoken');
 
 // 1. REGISTRO
 router.post('/registro', async (req, res) => {
@@ -13,7 +14,7 @@ router.post('/registro', async (req, res) => {
             return res.status(400).json({ error: "El email ya está registrado" });
         }
 
-        // ENCRIPTAR CONTRASEÑA
+        //ENCRIPTAR CONTRASEÑA
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const nuevoUsuario = new User({
@@ -33,7 +34,7 @@ router.post('/registro', async (req, res) => {
 });
 
 
-// 2. LOGIN (AÑADIR ESTO)
+
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -44,22 +45,20 @@ router.post('/login', async (req, res) => {
             return res.status(404).json({ error: "Usuario no encontrado" });
         }
 
-        // COMPARAR CONTRASEÑA
+
         const match = await bcrypt.compare(password, user.password);
 
         if (!match) {
             return res.status(401).json({ error: "Contraseña incorrecta" });
         }
 
-        const jwt = require('jsonwebtoken');
-
         const token = jwt.sign(
             { id: user._id, email: user.email },
-            "secreto123",
-            { expiresIn: "1h" }
+            process.env.JWT_SECRETT || "secreto_provisional",
+            { expiresIn: "24h" }
         );
 
-        res.json({ msg: "Login correcto", token });
+        res.json({ msg: "Login correcto" });
 
     } catch (error) {
         res.status(500).json({ error: error.message });

@@ -1,53 +1,203 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
-const Buscador = () => {
-    const [busqueda, setBusqueda] = useState(''); //aqui es lo que el user escribe en el buscador 
-    const [resultado, setResultado] = useState(null); //lo que devuelve el servidor.
-    const [error, setError] = useState(''); //Por si algo falla. 
+const Buscador = ({ tab }) => {
+  const [busqueda, setBusqueda] = useState('');
+  const [resultado, setResultado] = useState(null);
+  const [error, setError] = useState('');
 
+  // 1. Función para iconos de producto más lógicos
+  const obtenerIconoProducto = (nombre) => {
+    const n = nombre?.toLowerCase() || '';
+    if (n.includes('ropa') || n.includes('textil') || n.includes('pantalon')) return '👕';
+    if (n.includes('cuaderno') || n.includes('papel') || n.includes('sobre')) return '📄';
+    if (n.includes('lata') || n.includes('atun') || n.includes('conserva')) return '🥫';
+    if (n.includes('botella') || n.includes('vidrio') || n.includes('cristal')) return '🍾';
+    if (n.includes('fruta') || n.includes('comida') || n.includes('organico')) return '🍎';
+    if (n.includes('pila') || n.includes('bateria')) return '🔋';
+    return '♻️'; 
+  };
 
-    //conectamos con backend
-    const buscarResiduo = async (e) => {
-        e.preventDefault(); //evita que se recarge al dar a buscar.
-        setError('');
+  const obtenerImagenPNG = (nombreContenedor) => {
+    const nombre = nombreContenedor?.toLowerCase() || '';
+    if (nombre.includes('amarillo')) return '/am.png';
+    if (nombre.includes('azul')) return '/a.png';
+    if (nombre.includes('verde')) return '/v.png';
+    if (nombre.includes('marrón') || nombre.includes('marron')) return '/m.png';
+    if (nombre.includes('naranja')) return '/n.png';
+    return '/am.png';
+  };
 
-        try{
-            const response = await axios.get(`http://localhost:4000/api/recogidas?nombre=${busqueda}`);
+  const buscarResiduo = async (e) => {
+    if (e) e.preventDefault();
+    if (!busqueda.trim()) return;
+    
+    setError('');
+    try {
+      const res = await axios.get(
+        `https://ecopoint-production-8ab9.up.railway.app/api/contenedores/buscar-residuo?nombre=${busqueda}`
+      );
+      setResultado(res.data[0]);
+    } catch (err) {
+      setError('No encontramos ese residuo');
+      setResultado(null);
+    }
+  };
 
-            //se guarda larespuiesta en el estado "resultado"
-            setResultado(response.data);
-        } catch {
-            setError('No encontramos ese residuo. ¡Ayudanos a mejorar sugiriéndolo');
-            setResultado(null);
-        }
-    };
+  //LIMPIAR RESULTADOS AL CAMBIAR DE PESTAÑA
+  React.useEffect(() => {
+    setResultado(null);
+    setError('');
+    setBusqueda('');
+  }, [tab]); 
 
-    return (
-        <div style={{ padding: '20px', textAlign: 'center'}}>
-            <h2>¿Que quieres reciclar ?</h2>
-            {/*Formulario de busqueda */}
-            <form onSubmit={buscarResiduo}> 
-                <input
-                    type= "text"
-                    placeholder='Ej:Latas de atun'
-                    value={busqueda}
-                    onChange={(e) => setBusqueda(e.target.value)}
-                />
-                <button type='submit'>Buscar</button>
-            </form>
+  if (tab === "Recogida") return null;
 
-        {/* 3. Renderizado Condicional: Solo se muestra si hay resultados */}
-        {resultado && (
-        <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '10px' }}>
-          <h3>Resultado:</h3>
-          <p><strong>Depósitalo en:</strong> {resultado.contenedor}</p>
-          <p><em>Consejo: {resultado.consejos}</em></p>
+  return (
+    <div style={{ paddingBottom: '40px' }}>
+      
+   
+      <form onSubmit={buscarResiduo} style={contenedorBuscadorStyle}>
+        <input
+          type="text"
+          placeholder={tab === "Punto limpio" ? "Introduce tu CP..." : "¿Qué quieres reciclar?"}
+          value={busqueda}
+          onChange={(e) => setBusqueda(e.target.value)}
+          style={inputSinBordeStyle}
+        />
+        <button type="submit" style={botonLupaStyle}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+
+      {resultado && (
+        <div style={{ marginTop: '30px', animation: 'fadeIn 0.3s ease' }}>
+          <p style={{ fontWeight: '500', marginBottom: '15px', color: '#666', fontSize: '14px' }}>Resultado encontrado:</p>
+          
+          <div style={tarjetaPrincipalStyle}>
+            
+            
+            <div style={{ padding: '45px 20px', textAlign: 'center' }}>
+              <div style={{ fontSize: '75px', marginBottom: '15px' }}>
+                {obtenerIconoProducto(resultado.nombre)}
+              </div>
+              <h2 style={{ margin: 0, fontSize: '26px', fontWeight: '900', color: '#1A2E35' }}>
+                {resultado.nombre?.toUpperCase()}
+              </h2>
+            </div>
+
+            <div style={franjaContenedorFullStyle}>
+              <img 
+                src={obtenerImagenPNG(resultado.contenedor)} 
+                alt="contenedor" 
+                style={{ width: '90px', height: 'auto', filter: 'drop-shadow(0px 4px 6px rgba(0,0,0,0.1))' }} 
+              />
+              <div style={{ marginLeft: '25px' }}>
+                <span style={{ fontSize: '13px', color: '#666', display: 'block', fontWeight: 'bold' }}>RECICLAR EN EL CONTENEDOR:</span>
+                <span style={{ fontSize: '24px', fontWeight: '950', color: '#000' }}>
+                  {resultado.contenedor?.toUpperCase()}
+                </span>
+              </div>
+            </div>
+
+          
+            <div style={seccionConsejosStyle}>
+              <strong style={{ display: 'block', marginBottom: '10px', fontSize: '16px' }}>Consejos de reciclaje:</strong>
+              <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.6', fontWeight: '500' }}>
+                {resultado.consejos}
+              </p>
+            </div>
+          </div>
         </div>
-        )}
-        {error && <p style={{color: 'red'}}> {error}</p>}
+      )}
+
+      {error && (
+        <div style={tarjetaErrorStyle}>
+          <p>¿No está en nuestra lista?</p>
+          <h2 style={{ margin: '10px 0 20px 0' }}>¡Ayúdanos a crecer!</h2>
+          <button style={botonMasStyle}>+</button>
         </div>
-    );
+      )}
+    </div>
+  );
+};
+
+
+
+const contenedorBuscadorStyle = {
+  display: 'flex',
+  backgroundColor: 'white',
+  borderRadius: '30px',
+  padding: '5px 5px 5px 25px',
+  boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
+  alignItems: 'center'
+};
+
+const inputSinBordeStyle = {
+  flex: 1,
+  border: 'none',
+  outline: 'none',
+  fontSize: '16px',
+  padding: '15px 0'
+};
+
+const botonLupaStyle = {
+  backgroundColor: '#000',
+  border: 'none',
+  borderRadius: '25px',
+  width: '50px',
+  height: '50px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  cursor: 'pointer',
+  transition: 'transform 0.2s'
+};
+
+const tarjetaPrincipalStyle = {
+  backgroundColor: '#EAEAEA',
+  borderRadius: '35px',
+  overflow: 'hidden',
+  boxShadow: '0 20px 40px rgba(0,0,0,0.08)',
+  border: '1px solid #EEE'
+};
+
+const franjaContenedorFullStyle = {
+  backgroundColor: '#FFFFFF',
+  padding: '30px 40px',
+  display: 'flex',
+  alignItems: 'center',
+  borderTop: '1px solid #E0E0E0',
+  borderBottom: '1px solid #E0E0E0'
+};
+
+const seccionConsejosStyle = {
+  backgroundColor: '#FBC02D', 
+  padding: '35px 40px',
+  color: '#000'
+};
+
+const tarjetaErrorStyle = {
+  marginTop: '40px',
+  backgroundColor: '#5D677D',
+  padding: '50px',
+  borderRadius: '35px',
+  color: 'white',
+  textAlign: 'center'
+};
+
+const botonMasStyle = {
+  background: 'none',
+  border: '2px solid white',
+  color: 'white',
+  width: '60px',
+  height: '60px',
+  borderRadius: '50%',
+  fontSize: '32px',
+  cursor: 'pointer'
 };
 
 export default Buscador;

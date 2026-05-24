@@ -12,24 +12,28 @@ const Login = ({ irHome, irRegistro, setUsuarioLogueado }) => {
 
   const inputStyle = {
     width: '100%',
-    padding: '12px',
+    padding: '14px',
     margin: '10px 0',
-    borderRadius: '8px',
-    border: '1px solid #dfe6e9',
-    backgroundColor: '#fff',
-    boxSizing: 'border-box'
+    borderRadius: '12px', 
+    border: '1px solid #EAEAEA',
+    backgroundColor: '#F9F9F9', 
+    boxSizing: 'border-box',
+    fontSize: '15px',
+    outline: 'none'
   };
 
   const btnAcceder = {
     width: '100%',
-    padding: '12px',
-    backgroundColor: '#2D3436',
+    padding: '16px',
+    backgroundColor: '#000000', 
     color: 'white',
     border: 'none',
-    borderRadius: '8px',
+    borderRadius: '12px',
     cursor: 'pointer',
-    marginTop: '10px',
-    fontSize: '16px'
+    marginTop: '15px',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    transition: 'opacity 0.2s'
   };
 
   const handleChange = (e) => {
@@ -44,7 +48,7 @@ const Login = ({ irHome, irRegistro, setUsuarioLogueado }) => {
 
     try {
       const res = await axios.post(
-        'http://localhost:4000/api/usuarios/login',
+        'https://ecopoint-production-8ab9.up.railway.app/api/usuarios/login',
         formData
       );
       localStorage.setItem("token", res.data.token);
@@ -57,8 +61,7 @@ const Login = ({ irHome, irRegistro, setUsuarioLogueado }) => {
 
     } catch (error) {
       setMensaje(
-        error.response?.data?.error ||
-        'Error al iniciar sesión'
+        error.response?.data?.error || 'Error al iniciar sesión'
       );
     }
   };
@@ -69,21 +72,29 @@ const Login = ({ irHome, irRegistro, setUsuarioLogueado }) => {
       margin: '60px auto',
       backgroundColor: 'white',
       padding: '40px',
-      borderRadius: '20px',
-      boxShadow: '0 10px 25px rgba(0,0,0,0.05)',
+      borderRadius: '24px', 
+      boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
       textAlign: 'center'
     }}>
       
       <img 
-        src="https://cdn-icons-png.flaticon.com/512/3299/3299935.png" 
+        src="/logo-ecopoint.png" 
         alt="logo" 
         width="60" 
+        style={{ marginBottom: '10px' }}
       />
 
-      <h2 style={{ margin: '20px 0' }}>Iniciar Sesión</h2>
+      <h2 style={{ margin: '10px 0', fontWeight: '700' }}>Iniciar Sesión</h2>
+      <p style={{ color: '#888', fontSize: '14px', marginBottom: '25px' }}>
+        Inicia sesión para cuidar el planeta
+      </p>
 
       {mensaje && (
-        <p style={{ color: '#27ae60' }}>
+        <p style={{ 
+          color: mensaje.includes('Error') ? '#e74c3c' : '#27ae60',
+          fontSize: '14px',
+          marginBottom: '15px' 
+        }}>
           {mensaje}
         </p>
       )}
@@ -111,8 +122,9 @@ const Login = ({ irHome, irRegistro, setUsuarioLogueado }) => {
         <p style={{
           textAlign: 'right',
           fontSize: '12px',
-          color: '#636e72',
-          cursor: 'pointer'
+          color: '#999',
+          cursor: 'pointer',
+          marginTop: '5px'
         }}>
           ¿Olvidaste la contraseña?
         </p>
@@ -122,13 +134,13 @@ const Login = ({ irHome, irRegistro, setUsuarioLogueado }) => {
         </button>
       </form>
       
-      <p style={{ marginTop: '20px', fontSize: '14px' }}>
+      <p style={{ marginTop: '25px', fontSize: '14px', color: '#666' }}>
         ¿No tienes cuenta?{' '}
         <span 
-          style={{ color: '#27ae60', cursor: 'pointer', fontWeight: 'bold' }} 
+          style={{ color: '#27ae60', cursor: 'pointer', fontWeight: '600' }} 
           onClick={irRegistro}
         >
-          Regístrate
+          Regístrate gratis
         </span>
       </p>
     </div>

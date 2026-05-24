@@ -1,19 +1,15 @@
 const mongoose = require("mongoose");
 
-const DiaSchema = new mongoose.Schema({
-  semana: Number,
-  dia: String,
-  mes: String
-}, { _id: false });
-
 const RecogidaSchema = new mongoose.Schema({
   tipo: { type: String, default: "Muebles" },
+  descripcion: String,
   distrito: String,
-  codigoDistrito: String,
-  codigoBarrio: String,
   zona: String,
-  diasRecogida: [DiaSchema],
-  horario: String
+  diasRecogida: [String],
+  horario: String,
+  codigoPostal: String, 
+  instrucciones: String,
+  citaPrevia: { type: Boolean, default: false }
 });
 
-module.exports = mongoose.model("Recogida", RecogidaSchema);
+module.exports = mongoose.model("Recogida", RecogidaSchema, "recogidas_municipales");

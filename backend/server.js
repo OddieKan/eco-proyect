@@ -31,6 +31,9 @@ app.use("/api/usuarios", usuariosRoutes);
 const recogidasRoutes = require("./routes/recogidas.js");
 app.use("/api/recogidas", recogidasRoutes);
 
+const puntosRoutes = require("./routes/puntosLimpios");
+app.use("/api/puntos-limpios", puntosRoutes);
+
 // --- INICIO DEL SERVIDOR ---
 const PORT = 4000;
 app.listen(PORT, '0.0.0.0', () => {

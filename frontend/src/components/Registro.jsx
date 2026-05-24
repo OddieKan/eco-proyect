@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-
-
 const Registro = ({ irHome, irLogin, irBienvenida }) => {
-
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
@@ -26,57 +23,69 @@ const Registro = ({ irHome, irLogin, irBienvenida }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-   if (formData.nombre.length < 2) {
-  setMensaje('El nombre debe tener mínimo 2 caracteres');
-  return;
-}
+    if (formData.nombre.length < 2) {
+      setMensaje('El nombre debe tener mínimo 2 caracteres');
+      return;
+    }
 
-if (formData.apellido.length < 2) {
-  setMensaje('El apellido debe tener mínimo 2 caracteres');
-  return;
-}
+    if (formData.apellido.length < 2) {
+      setMensaje('El apellido debe tener mínimo 2 caracteres');
+      return;
+    }
 
-const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!regexEmail.test(formData.email)) {
-  setMensaje('El formato del email no es válido');
-  return;
-}
+    if (formData.password.length < 6) {
+      setMensaje('La contraseña debe tener mínimo 6 caracteres');
+      return;
+    }
 
-if (formData.password.length < 6) {
-  setMensaje('La contraseña debe tener mínimo 6 caracteres');
-  return;
-}
-
-if (!aceptaTerminos) {
-  setMensaje('Debes aceptar los términos y condiciones');
-  return;
-}
+    if (!aceptaTerminos) {
+      setMensaje('Debes aceptar los términos y condiciones');
+      return;
+    }
 
     try {
-
       setCargando(true);
-
       await axios.post(
-        'http://localhost:4000/api/usuarios/registro',
+        'https://ecopoint-production-8ab9.up.railway.app/api/usuarios/registro',
         formData
       );
 
-      setMensaje('Registro exitoso');
-
+      setMensaje('¡Cuenta creada!');
       setTimeout(() => {
         irBienvenida();
       }, 1500);
 
     } catch (error) {
-
       setMensaje(
-        error.response?.data?.error ||
-        'Error al registrar usuario'
+        error.response?.data?.error || 'Error al registrar usuario'
       );
-
     } finally {
       setCargando(false);
     }
+  };
+
+  const inputFigmaStyle = {
+    padding: '14px',
+    borderRadius: '12px',
+    border: '1px solid #EAEAEA',
+    backgroundColor: '#F9F9F9',
+    fontSize: '15px',
+    outline: 'none',
+    width: '100%',
+    boxSizing: 'border-box'
+  };
+
+  const botonNegroStyle = {
+    backgroundColor: '#000',
+    color: 'white',
+    border: 'none',
+    padding: '16px',
+    borderRadius: '12px',
+    fontWeight: 'bold',
+    fontSize: '16px',
+    cursor: 'pointer',
+    marginTop: '10px',
+    transition: 'opacity 0.2s'
   };
 
   return (
@@ -85,30 +94,35 @@ if (!aceptaTerminos) {
       margin: '60px auto',
       backgroundColor: 'white',
       padding: '40px',
-      borderRadius: '20px',
-      boxShadow: '0 10px 25px rgba(0,0,0,0.05)'
+      borderRadius: '24px',
+      boxShadow: '0 10px 30px rgba(0,0,0,0.03)'
     }}>
 
       <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-        <img src="/logo-ecopoint.png" width="60" alt="logo" />
-        <h2>Crea tu cuenta</h2>
+        <img src="/logo-ecopoint.png" width="50" alt="logo" style={{ marginBottom: '10px' }} />
+        <h2 style={{ margin: 0, fontWeight: '700' }}>Crea tu cuenta</h2>
+        <p style={{ color: '#888', fontSize: '14px', marginTop: '5px' }}>Únete a la comunidad EcoPoint</p>
       </div>
 
       {mensaje && (
-        <p style={{ textAlign: 'center', color: '#ff0000' }}>
+        <p style={{
+          textAlign: 'center',
+          color: mensaje.includes('Error') ? '#e74c3c' : '#27ae60',
+          fontSize: '14px',
+          marginBottom: '15px'
+        }}>
           {mensaje}
         </p>
       )}
 
       <form
         onSubmit={handleSubmit}
-        style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}
+        style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}
       >
-
         <input
           name="nombre"
           placeholder="Nombre"
-          style={inputStyle}
+          style={inputFigmaStyle}
           onChange={handleChange}
           required
         />
@@ -116,7 +130,7 @@ if (!aceptaTerminos) {
         <input
           name="apellido"
           placeholder="Apellido"
-          style={inputStyle}
+          style={inputFigmaStyle}
           onChange={handleChange}
           required
         />
@@ -125,7 +139,7 @@ if (!aceptaTerminos) {
           name="email"
           type="email"
           placeholder="Correo electrónico"
-          style={inputStyle}
+          style={inputFigmaStyle}
           onChange={handleChange}
           required
         />
@@ -133,39 +147,35 @@ if (!aceptaTerminos) {
         <input
           name="password"
           type="password"
-          placeholder="Contraseña"
-          style={inputStyle}
+          placeholder="Contraseña (mín. 6 caracteres)"
+          style={inputFigmaStyle}
           onChange={handleChange}
           required
         />
 
-         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <label style={{ fontSize: '13px', color: '#666', display: 'flex', alignItems: 'center', gap: '8px' }}>
           <input
             type="checkbox"
-            id="terminos"
             checked={aceptaTerminos}
             onChange={(e) => setAceptaTerminos(e.target.checked)}
           />
-          <label htmlFor="terminos" style={{ fontSize: '14px', color: '#666' }}>
-            Acepto los términos y condiciones de uso
-          </label>
-        </div>
-
+          Acepto los términos y condiciones
+        </label>
+        
         <button
           type="submit"
-          style={botonStyle}
+          style={{ ...botonNegroStyle, opacity: cargando ? 0.7 : 1 }}
           disabled={cargando}
         >
           {cargando ? 'Registrando...' : 'Registrarme'}
         </button>
-
       </form>
 
-      <p style={{ textAlign: 'center', marginTop: '20px' }}>
+      <p style={{ textAlign: 'center', marginTop: '25px', fontSize: '14px', color: '#666' }}>
         ¿Ya tienes cuenta?{' '}
         <span
           onClick={irLogin}
-          style={{ color: '#27ae60', cursor: 'pointer', fontWeight: 'bold' }}
+          style={{ color: '#27ae60', cursor: 'pointer', fontWeight: '600' }}
         >
           Inicia sesión
         </span>
@@ -175,32 +185,17 @@ if (!aceptaTerminos) {
         onClick={irHome}
         style={{
           textAlign: 'center',
-          marginTop: '10px',
+          marginTop: '15px',
           cursor: 'pointer',
-          color: '#999'
+          color: '#BBB',
+          fontSize: '13px',
+          textDecoration: 'underline'
         }}
       >
         Volver al inicio
       </p>
-
     </div>
   );
-};
-
-const inputStyle = {
-  padding: '12px',
-  borderRadius: '8px',
-  border: '1px solid #ddd'
-};
-
-const botonStyle = {
-  backgroundColor: '#96E6A1',
-  border: 'none',
-  padding: '14px',
-  borderRadius: '8px',
-  color: 'white',
-  fontWeight: 'bold',
-  cursor: 'pointer'
 };
 
 export default Registro;
