@@ -1,22 +1,37 @@
-const express =require('express');
-const router =express.Router();
-const Contenedor =require('../models/Contenedor');
-// GET /api/contenedores/buscar?distrito=Retiro
+const express = require('express');
+const router = express.Router();
+const Contenedor = require('../models/Contenedor');
+const Residuo = require('../models/Residuo');
+
+// GET /api/contenedores/buscar?tipo=Pilas
 router.get('/buscar', async (req, res) => {
   try {
-    const { distrito } = req.query; // Capturamos el distrito de la URL [cite: 196]
+    const { tipo } = req.query;
     let filtro = {};
-    // Solo aplicamos el regex si 'distrito' tiene contenido
-    if (distrito) {
-      filtro = { direccion: { $regex: distrito, $options: 'i' } };
+    if (tipo) {
+      filtro = { t1po: { $regex: tipo, $options: 'i' } };
     }
-    // Buscamos con el filtro (que estará vacío si no hay distrito)
     const puntos = await Contenedor.find(filtro).limit(50);
-    
     res.json(puntos);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
 
-module.exports=router;
+// GET /api/contenedores/buscar-residuo?nombre=ropa
+router.get('/buscar-residuo', async (req, res) => {
+  try {
+    const { nombre } = req.query;
+    if (!nombre) return res.status(400).json({ error: 'Falta el parámetro nombre' });
+
+    const residuos = await Residuo.find({
+      nombre: { $regex: nombre, $options: 'i' }
+    }).limit(10);
+
+    res.json(residuos);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+module.exports = router;

@@ -12,8 +12,8 @@ const Recogida = () => {
     setCargando(true);
     try {
       const [resRecogidas, resPuntos] = await Promise.all([
-        axios.get(`https://ecopoint-production-8ab9.up.railway.app/api/recogidas?cp=${cp}`),
-        axios.get(`https://ecopoint-production-8ab9.up.railway.app/api/puntos-limpios?cp=${cp}`)
+        axios.get(`${import.meta.env.VITE_API_URL}/api/recogidas?cp=${cp}`),
+        axios.get(`${import.meta.env.VITE_API_URL}/api/puntos-limpios?cp=${cp}`)
       ]);
       setRecogidas(resRecogidas.data);
       setPuntos(resPuntos.data);

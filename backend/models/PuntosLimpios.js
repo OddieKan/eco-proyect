@@ -1,24 +1,18 @@
 const mongoose = require("mongoose");
 
-const puntosLimpiosSchema = new mongoose.Schema(
-{
-  nombre: { type: String, required: true },
-  direccion: { type: String, required: true },
-  horario: { type: String },
-
-  codigoPostal: {
-    type: String,
-    required: true
+const puntoLimpioSchema = new mongoose.Schema(
+  {
+    nombre: { type: String },
+    direccion: { type: String },
+    horario: { type: String },
+    codigoPostal: { type: String },
+    distrito: { type: String },
+    lat: { type: Number },
+    lng: { type: Number },
+    materialesAceptados: [{ type: String }],
+    estado: { type: String }
   },
-
-  residuosAceptados: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Residuo"
-    }
-  ]
-},
-{ timestamps: true }
+  { timestamps: true }
 );
 
-module.exports = mongoose.model("PuntosLimpios", puntosLimpiosSchema, "punto_limpio");
+module.exports = mongoose.model("PuntoLimpio", puntoLimpioSchema, "punto_limpio");

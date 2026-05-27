@@ -46,7 +46,8 @@ const Registro = ({ irHome, irLogin, irBienvenida }) => {
     try {
       setCargando(true);
       await axios.post(
-        'https://ecopoint-production-8ab9.up.railway.app/api/usuarios/registro',
+        // 'https://ecopoint-production-8ab9.up.railway.app/api/usuarios/registro',
+        `${import.meta.env.VITE_API_URL}/api/usuarios/registro`,
         formData
       );
 
@@ -107,7 +108,7 @@ const Registro = ({ irHome, irLogin, irBienvenida }) => {
       {mensaje && (
         <p style={{
           textAlign: 'center',
-          color: mensaje.includes('Error') ? '#e74c3c' : '#27ae60',
+          color: mensaje.includes('creada') ? '#0d4e28' : '#e74c3c',
           fontSize: '14px',
           marginBottom: '15px'
         }}>

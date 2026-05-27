@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Buscador = ({ tab }) => {
+const Buscador = ({ tab, onPuntosEncontrados }) => {
   const [busqueda, setBusqueda] = useState('');
   const [resultado, setResultado] = useState(null);
   const [error, setError] = useState('');
 
-  // 1. Función para iconos de producto más lógicos
   const obtenerIconoProducto = (nombre) => {
     const n = nombre?.toLowerCase() || '';
     if (n.includes('ropa') || n.includes('textil') || n.includes('pantalon')) return '👕';
@@ -15,7 +14,7 @@ const Buscador = ({ tab }) => {
     if (n.includes('botella') || n.includes('vidrio') || n.includes('cristal')) return '🍾';
     if (n.includes('fruta') || n.includes('comida') || n.includes('organico')) return '🍎';
     if (n.includes('pila') || n.includes('bateria')) return '🔋';
-    return '♻️'; 
+    return '♻️';
   };
 
   const obtenerImagenPNG = (nombreContenedor) => {
@@ -31,32 +30,46 @@ const Buscador = ({ tab }) => {
   const buscarResiduo = async (e) => {
     if (e) e.preventDefault();
     if (!busqueda.trim()) return;
-    
+
     setError('');
     try {
-      const res = await axios.get(
-        `https://ecopoint-production-8ab9.up.railway.app/api/contenedores/buscar-residuo?nombre=${busqueda}`
-      );
-      setResultado(res.data[0]);
+      let res;
+
+      if (tab === "Punto limpio") {
+        res = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/puntos-limpios?cp=${busqueda}`
+        );
+        setResultado(res.data[0] || null);
+        if (res.data.length) {
+          onPuntosEncontrados(res.data);
+        } else {
+          setError('No encontramos puntos limpios con ese código postal');
+        }
+      } else {
+        res = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/contenedores/buscar-residuo?nombre=${busqueda}`
+        );
+        setResultado(res.data[0] || null);
+        if (!res.data.length) setError('No encontramos ese residuo');
+      }
+
     } catch (err) {
-      setError('No encontramos ese residuo');
+      setError('Error al realizar la búsqueda');
       setResultado(null);
     }
   };
 
-  //LIMPIAR RESULTADOS AL CAMBIAR DE PESTAÑA
   React.useEffect(() => {
     setResultado(null);
     setError('');
     setBusqueda('');
-  }, [tab]); 
+  }, [tab]);
 
   if (tab === "Recogida") return null;
 
   return (
     <div style={{ paddingBottom: '40px' }}>
-      
-   
+
       <form onSubmit={buscarResiduo} style={contenedorBuscadorStyle}>
         <input
           type="text"
@@ -73,13 +86,26 @@ const Buscador = ({ tab }) => {
         </button>
       </form>
 
-      {resultado && (
+      {resultado && tab === "Punto limpio" && (
+        <div style={{ marginTop: '20px', backgroundColor: 'white', borderRadius: '20px', padding: '25px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', border: '1px solid #f0f0f0' }}>
+          <span style={{ fontSize: '15px', fontWeight: '800', color: '#2ecc71', letterSpacing: '0.5px' }}>PUNTO LIMPIO ENCONTRADO</span>
+          <h3 style={{ margin: '8px 0', fontSize: '20px', color: '#2d3436', fontWeight: '700' }}>{resultado.nombre}</h3>
+          <p style={{ margin: '4px 0', fontSize: '16px', color: '#636e72' }}> {resultado.direccion}</p>
+          {resultado.horario && <p style={{ margin: '4px 0', fontSize: '20px', color: '#165e78' }}>{resultado.horario}</p>}
+          {resultado.distrito && <p style={{ margin: '4px 0', fontSize: '16px', color: '#636e72' }}> {resultado.distrito}</p>}
+          {resultado.materialesAceptados?.length > 0 && (
+            <p style={{ margin: '8px 0 0 0', fontSize: '20px', color: '#2ecc71', fontWeight: '600' }}>
+               {resultado.materialesAceptados.join(', ')}
+            </p>
+          )}
+        </div>
+      )}
+
+      {resultado && tab !== "Punto limpio" && (
         <div style={{ marginTop: '30px', animation: 'fadeIn 0.3s ease' }}>
           <p style={{ fontWeight: '500', marginBottom: '15px', color: '#666', fontSize: '14px' }}>Resultado encontrado:</p>
-          
+
           <div style={tarjetaPrincipalStyle}>
-            
-            
             <div style={{ padding: '45px 20px', textAlign: 'center' }}>
               <div style={{ fontSize: '75px', marginBottom: '15px' }}>
                 {obtenerIconoProducto(resultado.nombre)}
@@ -90,10 +116,10 @@ const Buscador = ({ tab }) => {
             </div>
 
             <div style={franjaContenedorFullStyle}>
-              <img 
-                src={obtenerImagenPNG(resultado.contenedor)} 
-                alt="contenedor" 
-                style={{ width: '90px', height: 'auto', filter: 'drop-shadow(0px 4px 6px rgba(0,0,0,0.1))' }} 
+              <img
+                src={obtenerImagenPNG(resultado.contenedor)}
+                alt="contenedor"
+                style={{ width: '90px', height: 'auto', filter: 'drop-shadow(0px 4px 6px rgba(0,0,0,0.1))' }}
               />
               <div style={{ marginLeft: '25px' }}>
                 <span style={{ fontSize: '13px', color: '#666', display: 'block', fontWeight: 'bold' }}>RECICLAR EN EL CONTENEDOR:</span>
@@ -103,7 +129,6 @@ const Buscador = ({ tab }) => {
               </div>
             </div>
 
-          
             <div style={seccionConsejosStyle}>
               <strong style={{ display: 'block', marginBottom: '10px', fontSize: '16px' }}>Consejos de reciclaje:</strong>
               <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.6', fontWeight: '500' }}>
@@ -115,17 +140,22 @@ const Buscador = ({ tab }) => {
       )}
 
       {error && (
-        <div style={tarjetaErrorStyle}>
-          <p>¿No está en nuestra lista?</p>
-          <h2 style={{ margin: '10px 0 20px 0' }}>¡Ayúdanos a crecer!</h2>
-          <button style={botonMasStyle}>+</button>
-        </div>
+        tab === "Punto limpio" ? (
+          <p style={{ textAlign: 'center', color: '#e74c3c', marginTop: '20px' }}>
+            {error}
+          </p>
+        ) : (
+          <div style={tarjetaErrorStyle}>
+            <p>¿No está en nuestra lista?</p>
+            <h2 style={{ margin: '10px 0 20px 0' }}>¡Ayúdanos a crecer!</h2>
+            <button style={botonMasStyle}>+</button>
+          </div>
+        )
       )}
+
     </div>
   );
 };
-
-
 
 const contenedorBuscadorStyle = {
   display: 'flex',
@@ -175,7 +205,7 @@ const franjaContenedorFullStyle = {
 };
 
 const seccionConsejosStyle = {
-  backgroundColor: '#FBC02D', 
+  backgroundColor: '#FBC02D',
   padding: '35px 40px',
   color: '#000'
 };

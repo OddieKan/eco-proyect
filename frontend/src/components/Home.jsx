@@ -9,6 +9,7 @@ function Home() {
   const [contenedores, setContenedores] = useState([]);
   const [miPosicion, setMiPosicion] = useState(null);
   const [residuo, setResiduo] = useState(null);
+  const [puntosLimpiosBuscados, setPuntosLimpiosBuscados] = useState([]);
 
   // --- LÓGICA DE CÁLCULO DE DISTANCIAS ---
   const contenedoresCercanos = useMemo(() => {
@@ -42,8 +43,9 @@ function Home() {
       try {
         // Si el usuario eligió un residuo en la pestaña anterior, filtramos en la API
         const parametroTipo = residuo ? `?tipo=${residuo}` : "";
-        const res = await axios.get(`https://ecopoint-production-8ab9.up.railway.app/contenedores/buscar${parametroTipo}`);
-        setContenedores(res.data);
+     //   const res = await axios.get(`https://ecopoint-production-8ab9.up.railway.app/contenedores/buscar${parametroTipo}`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/contenedores/buscar${parametroTipo}`);
+     setContenedores(res.data);
       } catch (err) {
         console.error("Error cargando contenedores:", err);
       }
@@ -51,7 +53,7 @@ function Home() {
     cargar();
   }, [tabActiva, residuo]);
 
-  useEffect(() => {
+/*  useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (pos) => {
@@ -63,11 +65,32 @@ function Home() {
         (error) => console.warn("Error obteniendo ubicación:", error)
       );
     }
-  }, []);
+  }, []); */
+
+  useEffect(() => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setMiPosicion({
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude
+        });
+      },
+      (error) => {
+        console.warn("Error obteniendo ubicación, usando Madrid centro:", error);
+        // Coordenadas de Madrid centro como fallback
+        setMiPosicion({ lat: 40.4168, lng: -3.7038 });
+      }
+    );
+  } else {
+    setMiPosicion({ lat: 40.4168, lng: -3.7038 });
+  }
+}, []);
 
   // --- MANEJADOR DE SELECCIÓN INTELIGENTE ---
   const seleccionarResiduo = (tipo) => {
     setResiduo(tipo);
+    setPuntosLimpiosBuscados([]);
     if (tipo === "Muebles") {
       setTabActiva("Recogida");
     } else {
@@ -107,7 +130,7 @@ function Home() {
 
         {/* BUSCADOR GENERAL */}
         <div style={{ marginBottom: '30px' }}>
-          <Buscador tab={tabActiva} />
+          <Buscador tab={tabActiva} onPuntosEncontrados={setPuntosLimpiosBuscados} />
         </div>
 
         {/* CONTENIDO DINÁMICO */}
@@ -141,14 +164,24 @@ function Home() {
   <div style={{ animation: 'fadeIn 0.5s ease' }}>
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
       <h3 style={sectionTitleStyle}>Puntos cercanos</h3>
-      {residuo && <span style={filtroBadgeStyle}>Filtro: {residuo}</span>}
+      {residuo && (
+  <span style={filtroBadgeStyle}>
+    Filtro: {residuo}
+    <span 
+      onClick={() => { setResiduo(null); setPuntosLimpiosBuscados([]); }}
+      style={{ marginLeft: '8px', cursor: 'pointer', fontWeight: '900' }}
+    >
+      ✕
+    </span>
+  </span>
+)}
     </div>
 
-    <MapaContenedores 
-      contenedores={contenedores} 
-      miPosicion={miPosicion} 
-      tipo={residuo}
-    />
+   <MapaContenedores 
+  contenedores={puntosLimpiosBuscados.length > 0 ? puntosLimpiosBuscados : contenedores} 
+  miPosicion={miPosicion} 
+  tipo={residuo}
+/>
 
     <div style={{ marginTop: '30px' }}>
       <h4 style={{ fontSize: '16px', color: '#1A2E35', marginBottom: '15px' }}>Lista de puntos:</h4>
