@@ -6,7 +6,9 @@ require("dotenv").config();
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: 'https://eco-proyect-liard.vercel.app'
+}));
 app.use(express.json()); // Permite que el servidor entienda JSON (necesario para el registro)
 
 // --- CONEXIÓN A MONGODB ---
